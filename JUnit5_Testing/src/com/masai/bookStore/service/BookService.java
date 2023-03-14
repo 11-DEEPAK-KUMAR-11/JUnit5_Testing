@@ -21,4 +21,14 @@ public class BookService {
 		return Collections.unmodifiableList(listOfBooks);
 	}
 	
+	
+	public Book getBookById(int bookId) {
+		for(Book book : listOfBooks) {
+			if(bookId==book.getId() ){
+				return book;
+			}
+		}
+		return null;
+	}
+	
 }
